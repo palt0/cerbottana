@@ -15,7 +15,7 @@ from dateutil.parser import parse
 
 import utils
 from database import Database
-from plugins import parametrize_room, plugin_wrapper, route_wrapper
+from plugins import parametrize_room, command_wrapper, route_wrapper
 from room import Room
 from tasks import init_task_wrapper
 
@@ -228,7 +228,7 @@ async def load_old_repeats(conn: Connection) -> None:
     Repeat.pull_db(conn)
 
 
-@plugin_wrapper(aliases=["addrepeat", "ripeti"])
+@command_wrapper(aliases=["addrepeat", "ripeti"])
 async def repeat(conn: Connection, room: Optional[str], user: str, arg: str) -> None:
     if room is None or not utils.is_driver(user):
         return
@@ -270,7 +270,7 @@ async def repeat(conn: Connection, room: Optional[str], user: str, arg: str) -> 
         await conn.send_message(room, errmsg)
 
 
-@plugin_wrapper(aliases=["deleterepeat", "rmrepeat"])
+@command_wrapper(aliases=["deleterepeat", "rmrepeat"])
 async def stoprepeat(
     conn: Connection, room: Optional[str], user: str, arg: str
 ) -> None:
@@ -290,7 +290,7 @@ async def stoprepeat(
     await conn.send_message(room, "Fatto.")
 
 
-@plugin_wrapper(aliases=["repeats"])
+@command_wrapper(aliases=["repeats"])
 @parametrize_room
 async def showrepeats(
     conn: Connection, room: Optional[str], user: str, arg: str
