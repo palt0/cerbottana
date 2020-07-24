@@ -20,7 +20,7 @@ async def parse_chat_message(
             message = message[
                 (len(conn.command_character) + len(command) + 1) :
             ].strip()
-            await conn.commands[command].callback(conn, roomid, user, message)
+            await conn.commands[command](conn, roomid, user, message)
         elif roomid is None:
             await conn.send_pm(user, "Invalid command")
 

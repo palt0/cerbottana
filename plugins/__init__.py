@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 
 
 class Command:
-    _instances: Dict[str, Command] = dict()
+    _instances: List[Command] = []
 
     def __init__(
         self,
@@ -46,45 +46,42 @@ class Command:
         self.aliases = [self.name] + aliases  # needs to be a new binding
         self.helpstr = helpstr
         self.is_unlisted = is_unlisted
-        self._instances[func.__name__] = self
+
+        self._instances.append(self)
+        self._instances.sort(key=lambda inst: inst.name)
+        # TODO: optimize (ex.: bisect.insort with key param, when available)
 
     @property
     def splitted_aliases(self) -> Dict[str, Command]:
         return {alias: self for alias in self.aliases}
 
+    async def __call__(
+        self, conn: Connection, room: Optional[str], user: str, arg: str
+    ) -> None:
+        if room is not None and not utils.is_voice(user):
+            return
+        await self.callback(conn, room, user, arg)
+
     @classmethod
     def get_all_aliases(cls) -> Dict[str, Command]:
         d: Dict[str, Command] = {}
-        for command in cls._instances.values():
+        for command in cls._instances:
             d.update(command.splitted_aliases)
         return d
 
     @classmethod
     def get_all_helpstrings(cls) -> Dict[str, str]:
         d: Dict[str, str] = {}
-        for command in cls._instances.values():
+        for command in cls._instances:
             if command.helpstr and not command.is_unlisted:
                 d[command.name] = command.helpstr
-        return {k: d[k] for k in sorted(d)}  # python 3.7+
-
-
-def scope_checker(func: CommandFunc) -> CommandFunc:
-    @wraps(func)
-    async def scope_wrapper(
-        conn: Connection, room: Optional[str], user: str, arg: str
-    ) -> None:
-        if room is not None and not utils.is_voice(user):
-            return
-        await func(conn, room, user, arg)
-
-    return scope_wrapper
+        return d
 
 
 def command_wrapper(
     aliases: List[str] = [], helpstr: str = "", is_unlisted: bool = False
 ) -> Callable[[CommandFunc], Command]:
     def cls_wrapper(func: CommandFunc) -> Command:
-        func = scope_checker(func)  # manual decorator binding
         return Command(func, aliases, helpstr, is_unlisted)
 
     return cls_wrapper
