@@ -228,7 +228,9 @@ async def load_old_repeats(conn: Connection) -> None:
     Repeat.pull_db(conn)
 
 
-@command_wrapper(aliases=["addrepeat", "ripeti"])
+@command_wrapper(
+    aliases=["addrepeat", "ripeti"], group="repeats", helpstr="a", is_unlisted=True
+)
 async def repeat(conn: Connection, room: Optional[str], user: str, arg: str) -> None:
     if room is None or not utils.is_driver(user):
         return
@@ -270,7 +272,9 @@ async def repeat(conn: Connection, room: Optional[str], user: str, arg: str) -> 
         await conn.send_message(room, errmsg)
 
 
-@command_wrapper(aliases=["deleterepeat", "rmrepeat"])
+@command_wrapper(
+    aliases=["deleterepeat", "rmrepeat"], group="repeats", helpstr="b", is_unlisted=True
+)
 async def stoprepeat(
     conn: Connection, room: Optional[str], user: str, arg: str
 ) -> None:
@@ -290,7 +294,7 @@ async def stoprepeat(
     await conn.send_message(room, "Fatto.")
 
 
-@command_wrapper(aliases=["repeats"])
+@command_wrapper(aliases=["repeats"], group="repeats", helpstr="c", is_unlisted=True)
 @parametrize_room
 async def showrepeats(
     conn: Connection, room: Optional[str], user: str, arg: str

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Dict, Optional
 
 from plugins import Command, command_wrapper
 
@@ -10,19 +10,30 @@ if TYPE_CHECKING:
 
 @command_wrapper(is_unlisted=True)
 async def help(conn: Connection, room: Optional[str], user: str, arg: str) -> None:
-    if arg in conn.commands and conn.commands[arg].helpstr:
-        # asking for a specific command
-        message = "<b>{}</b> {}".format(arg, conn.commands[arg].helpstr)
-        await conn.send_htmlbox(room, user, message)
-    elif arg == "":
-        # asking for a list of every command
-        helpstrings = Command.get_all_helpstrings()
-        if not helpstrings:
-            return
+    query = arg.strip().lower()
+    pairs: Dict[str, Command] = dict()  # remains empty if no match is found
 
-        html = ""
-        for key in helpstrings:
-            html += "<b>{}</b> {}<br>".format(key, helpstrings[key])
-        await conn.send_htmlbox(room, user, html[:-4])
+    if not query:
+        # requesting a list of all command: exclude unlisted commands, exclude aliases
+        pairs = Command.get_pairs(with_aliases=False)
+        pairs = {k: inst for k, inst in pairs.items() if not inst.is_unlisted}
+    elif query in Command.get_groups():
+        # requesting a group of commands: include unlisted commands, exclude aliases
+        pairs = Command.get_pairs(with_aliases=False, group=query)
     else:
-        await conn.send_reply(room, user, "Comando non trovato")
+        # requesting a specific command: consider unlisted commands and aliases
+        all_aliases = Command.get_pairs(with_aliases=True)
+        if query in all_aliases:
+            pairs = {query: all_aliases[query]}
+
+    # filter out commands without a helpstring
+    help_dict = {alias: inst.helpstr for alias, inst in pairs.items() if inst.helpstr}
+
+    if not help_dict:
+        await conn.send_reply(room, user, "Nessun comando trovato")
+        return
+
+    html = ""
+    for alias, helpstr in help_dict.items():
+        html += f"<b>{alias}</b> {helpstr}<br>"
+    await conn.send_htmlbox(room, user, html[:-4])

@@ -12,6 +12,7 @@ from typing import (
     Iterable,
     List,
     Optional,
+    Set,
     Tuple,
     Union,
 )
@@ -32,28 +33,41 @@ if TYPE_CHECKING:
 
 
 class Command:
+    """See ./README.md for an explanation of the purpose of this class."""
+
     _instances: List[Command] = []
+    _groups: Set[str] = set()
 
     def __init__(
         self,
         func: CommandFunc,
         aliases: List[str] = [],
+        group: str = "misc",
         helpstr: str = "",
         is_unlisted: bool = False,
     ) -> None:
         self.name = func.__name__
         self.callback = func
-        self.aliases = [self.name] + aliases  # needs to be a new binding
+        self._aliases = [self.name] + aliases
+        self.group = group
         self.helpstr = helpstr
         self.is_unlisted = is_unlisted
 
+        # check that this new instance isn't conflicting with previous ones
+        for old_alias, old_inst in self.get_pairs().items():
+            if old_alias in self._aliases:
+                errmsg = f"Error: '{old_alias}' alias of {old_inst.name} command "
+                errmsg += f"is redefined by {self.name} command, keeping old definition"
+                print(errmsg)
+                return  # skip registering phase
+
         self._instances.append(self)
-        self._instances.sort(key=lambda inst: inst.name)
-        # TODO: optimize (ex.: bisect.insort with key param, when available)
+        self._instances.sort(key=lambda inst: inst.name)  # TODO: optimize
+        self._groups.add(group)
 
     @property
-    def splitted_aliases(self) -> Dict[str, Command]:
-        return {alias: self for alias in self.aliases}
+    def aliases(self) -> List[str]:
+        return self._aliases  # expose self._aliases as read-only
 
     async def __call__(
         self, conn: Connection, room: Optional[str], user: str, arg: str
@@ -63,26 +77,43 @@ class Command:
         await self.callback(conn, room, user, arg)
 
     @classmethod
-    def get_all_aliases(cls) -> Dict[str, Command]:
-        d: Dict[str, Command] = {}
-        for command in cls._instances:
-            d.update(command.splitted_aliases)
-        return d
+    def get_groups(cls) -> Set[str]:
+        return cls._groups  # expose cls._groups as read-only
 
     @classmethod
-    def get_all_helpstrings(cls) -> Dict[str, str]:
-        d: Dict[str, str] = {}
-        for command in cls._instances:
-            if command.helpstr and not command.is_unlisted:
-                d[command.name] = command.helpstr
-        return d
+    def get_pairs(
+        cls, with_aliases: bool = True, group: Optional[str] = None
+    ) -> Dict[str, Command]:
+        """
+        Returns a dictionary that maps alias strings to Command instances.
+        Aliases of the same command are mapped to the same instance.
+        To get a dictionary of unique commands, set with_aliases = True
+        """
+
+        if group is not None:  # restrict commands to a specific group
+            if group not in cls._groups:  # save calculation time
+                return dict()
+            instances = [inst for inst in cls._instances if inst.group == group]
+        else:  # no restrictions: entire list of commands
+            instances = cls._instances
+
+        pairs: Dict[str, Command] = dict()
+        for inst in instances:
+            if with_aliases:
+                pairs.update({alias: inst for alias in inst.aliases})
+            else:
+                pairs.update({inst.name: inst})
+        return pairs
 
 
 def command_wrapper(
-    aliases: List[str] = [], helpstr: str = "", is_unlisted: bool = False
+    aliases: List[str] = [],
+    group: str = "misc",
+    helpstr: str = "",
+    is_unlisted: bool = False,
 ) -> Callable[[CommandFunc], Command]:
     def cls_wrapper(func: CommandFunc) -> Command:
-        return Command(func, aliases, helpstr, is_unlisted)
+        return Command(func, aliases, group, helpstr, is_unlisted)
 
     return cls_wrapper
 
@@ -91,9 +122,9 @@ def parametrize_room(func: CommandFunc) -> CommandFunc:
     """
     Changes the syntax of a command depending on its context:
     (1) If it's used in a room, it automatically adds its roomid at the
-        beginning of arg.
+    beginning of arg.
     (2) If it's used in PM, it requires to specify an additional parameter
-        at the beginning of arg representing a roomid.
+    at the beginning of arg representing a roomid.
 
     This way, room-dependant commands can be used in PM too without coding
     any additional logic. An example is randquote (quotes.py).
@@ -169,4 +200,4 @@ for f in modules:
         name = basename(f)[:-3]
         importlib.import_module("plugins." + name)
 
-commands = Command.get_all_aliases()
+commands = Command.get_pairs()
