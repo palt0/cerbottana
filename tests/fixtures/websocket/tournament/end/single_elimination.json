@@ -1,0 +1,337 @@
+{
+  "results": [
+    [
+      "MalMoonsault"
+    ]
+  ],
+  "format": "gen8ou",
+  "generator": "Single Elimination",
+  "bracketData": {
+    "type": "tree",
+    "rootNode": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "sza28627"
+                        },
+                        {
+                          "team": "Fetzi die Landmine"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Fetzi die Landmine",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        3
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "MalMoonsault"
+                        },
+                        {
+                          "team": "dvpermario"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "MalMoonsault",
+                      "result": "win",
+                      "score": [
+                        4,
+                        0
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "MalMoonsault",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    4
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "m6ter"
+                        },
+                        {
+                          "team": "tfhyghgyyi"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "tfhyghgyyi",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        4
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "math656"
+                        },
+                        {
+                          "team": "NinU_x02"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "math656",
+                      "result": "win",
+                      "score": [
+                        2,
+                        0
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "math656",
+                  "result": "loss",
+                  "score": [
+                    4,
+                    6
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "MalMoonsault",
+              "result": "win",
+              "score": [
+                2,
+                0
+              ]
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "Spongebob1203"
+                        },
+                        {
+                          "team": "Showkuy∞"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Spongebob1203",
+                      "result": "win",
+                      "score": [
+                        2,
+                        1
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "orion89"
+                        },
+                        {
+                          "team": "Cubone999"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Cubone999",
+                      "result": "loss",
+                      "score": [
+                        4,
+                        5
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "Cubone999",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "Pwaite"
+                        },
+                        {
+                          "team": "decem77"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "decem77",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "LT72MS Leaf"
+                        },
+                        {
+                          "team": "TeamCharm69"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "TeamCharm69",
+                      "result": "loss",
+                      "score": [
+                        3,
+                        6
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "TeamCharm69",
+                  "result": "loss",
+                  "score": [
+                    6,
+                    6
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "Cubone999",
+              "result": "win",
+              "score": [
+                5,
+                3
+              ]
+            }
+          ],
+          "state": "finished",
+          "team": "MalMoonsault",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "team": "king of trades"
+                    },
+                    {
+                      "team": "PDBD"
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "king of trades",
+                  "result": "win",
+                  "score": [
+                    5,
+                    4
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "team": "Khalni"
+                    },
+                    {
+                      "team": "Shrey44"
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "Khalni",
+                  "result": "win",
+                  "score": [
+                    6,
+                    6
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "king of trades",
+              "result": "win",
+              "score": [
+                5,
+                4
+              ]
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "team": "ACE PUNPRO"
+                    },
+                    {
+                      "team": "Gumboyball"
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "ACE PUNPRO",
+                  "result": "win",
+                  "score": [
+                    2,
+                    0
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "team": "Dragon246"
+                    },
+                    {
+                      "team": "Mattorr... ツ"
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "Mattorr... ツ",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    2
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "Mattorr... ツ",
+              "result": "loss",
+              "score": [
+                2,
+                5
+              ]
+            }
+          ],
+          "state": "finished",
+          "team": "king of trades",
+          "result": "win",
+          "score": [
+            6,
+            3
+          ]
+        }
+      ],
+      "state": "finished",
+      "team": "MalMoonsault",
+      "result": "win",
+      "score": [
+        2,
+        0
+      ]
+    }
+  }
+}

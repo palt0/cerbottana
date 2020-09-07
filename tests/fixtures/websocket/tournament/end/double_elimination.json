@@ -1,0 +1,438 @@
+{
+  "results": [
+    [
+      "Sacramentu"
+    ],
+    [
+      "Spritzalcianuro96"
+    ]
+  ],
+  "format": "gen8randombattle",
+  "generator": "Double Elimination",
+  "bracketData": {
+    "type": "tree",
+    "rootNode": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "Ciaoni"
+                        },
+                        {
+                          "team": "Marco210297"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Marco210297",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        3
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "qwertydj"
+                        },
+                        {
+                          "team": "MelodyL"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "MelodyL",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        5
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "MelodyL",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    4
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "FranticFranxx"
+                        },
+                        {
+                          "team": "BlaD3"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "BlaD3",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "un nome"
+                        },
+                        {
+                          "team": "Sacramentu"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Sacramentu",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        3
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "Sacramentu",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    1
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "Sacramentu",
+              "result": "loss",
+              "score": [
+                0,
+                3
+              ]
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "m e g a g r"
+                        },
+                        {
+                          "team": "Escavalier 9"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "m e g a g r",
+                      "result": "win",
+                      "score": [
+                        5,
+                        4
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "Gela101"
+                        },
+                        {
+                          "team": "Spritzalcianuro96"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Spritzalcianuro96",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        3
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "Spritzalcianuro96",
+                  "result": "loss",
+                  "score": [
+                    0,
+                    4
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "team": "Samuele1503"
+                        },
+                        {
+                          "team": "lukepowerranger"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "lukepowerranger",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "team": "Naviru"
+                        },
+                        {
+                          "team": "GodFish66"
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Naviru",
+                      "result": "win",
+                      "score": [
+                        4,
+                        3
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "lukepowerranger",
+                  "result": "win",
+                  "score": [
+                    2,
+                    0
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "Spritzalcianuro96",
+              "result": "win",
+              "score": [
+                2,
+                1
+              ]
+            }
+          ],
+          "state": "finished",
+          "team": "Spritzalcianuro96",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "children": [
+            {
+              "team": "Sacramentu"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "team": "MelodyL"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "team": "Marco210297"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "team": "Ciaoni"
+                                },
+                                {
+                                  "team": "qwertydj"
+                                }
+                              ],
+                              "state": "finished",
+                              "team": "qwertydj",
+                              "result": "loss",
+                              "score": [
+                                0,
+                                1
+                              ]
+                            }
+                          ],
+                          "state": "finished",
+                          "team": "Marco210297",
+                          "result": "win",
+                          "score": [
+                            2,
+                            0
+                          ]
+                        },
+                        {
+                          "children": [
+                            {
+                              "team": "BlaD3"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "team": "FranticFranxx"
+                                },
+                                {
+                                  "team": "un nome"
+                                }
+                              ],
+                              "state": "finished",
+                              "team": "FranticFranxx",
+                              "result": "win",
+                              "score": [
+                                3,
+                                1
+                              ]
+                            }
+                          ],
+                          "state": "finished",
+                          "team": "BlaD3",
+                          "result": "win",
+                          "score": [
+                            1,
+                            0
+                          ]
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "BlaD3",
+                      "result": "loss",
+                      "score": [
+                        0,
+                        1
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "MelodyL",
+                  "result": "win",
+                  "score": [
+                    2,
+                    0
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "team": "lukepowerranger"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "team": "m e g a g r"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "team": "Escavalier 9"
+                                },
+                                {
+                                  "team": "Gela101"
+                                }
+                              ],
+                              "state": "finished",
+                              "team": "Gela101",
+                              "result": "loss",
+                              "score": [
+                                0,
+                                1
+                              ]
+                            }
+                          ],
+                          "state": "finished",
+                          "team": "Gela101",
+                          "result": "loss",
+                          "score": [
+                            0,
+                            2
+                          ]
+                        },
+                        {
+                          "children": [
+                            {
+                              "team": "Naviru"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "team": "Samuele1503"
+                                },
+                                {
+                                  "team": "GodFish66"
+                                }
+                              ],
+                              "state": "finished",
+                              "team": "Samuele1503",
+                              "result": "win",
+                              "score": [
+                                1,
+                                0
+                              ]
+                            }
+                          ],
+                          "state": "finished",
+                          "team": "Naviru",
+                          "result": "win",
+                          "score": [
+                            1,
+                            0
+                          ]
+                        }
+                      ],
+                      "state": "finished",
+                      "team": "Naviru",
+                      "result": "loss",
+                      "score": [
+                        6,
+                        6
+                      ]
+                    }
+                  ],
+                  "state": "finished",
+                  "team": "lukepowerranger",
+                  "result": "win",
+                  "score": [
+                    1,
+                    0
+                  ]
+                }
+              ],
+              "state": "finished",
+              "team": "MelodyL",
+              "result": "win",
+              "score": [
+                3,
+                0
+              ]
+            }
+          ],
+          "state": "finished",
+          "team": "Sacramentu",
+          "result": "win",
+          "score": [
+            4,
+            0
+          ]
+        }
+      ],
+      "state": "finished",
+      "team": "Sacramentu",
+      "result": "loss",
+      "score": [
+        0,
+        1
+      ]
+    }
+  }
+}

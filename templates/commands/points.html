@@ -1,0 +1,38 @@
+<table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; margin-left: auto; margin-right: auto; text-align: center">
+  <thead>
+    <tr>
+      <th colspan="100%">Leaderboard di {{ room }}</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th>Utente</th>
+      <th>Punti</th>
+      <th>1st</th>
+      <th>2nd</th>
+      <th>3rd</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rs %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td style="text-align: left">
+          {# Can't use custom CSS classes in an HTML box, so the color attribute needs
+             to be in a separate span to avoid changing the border color too #}
+          <span style="color: {{ row.user.name_color }}; font-weight: bold">{{ row.user.username }}</span>
+        </td>
+        <td>{{ row.tourpoints }}</td>
+        <td>{{ row.first_perc }}%</td>
+        <td>{{ row.second_perc }}%</td>
+        <td>{{ row.third_perc }}%</td>
+      </tr>
+    {% endfor %}
+    {% if is_truncated %}
+    <tr>
+      <td colspan="100%">
+        <a href={{ url }}>Vedi classifica completa...</a>
+      </td>
+    </tr>
+    {% endif %}
+  </tbody>
+</table>

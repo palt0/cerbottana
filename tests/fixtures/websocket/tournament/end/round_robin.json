@@ -1,0 +1,715 @@
+{
+  "results": [
+    [
+      "pokeleox"
+    ],
+    [
+      "dilfmon"
+    ],
+    [
+      "Marco210297"
+    ],
+    [
+      "useless trainer"
+    ],
+    [
+      "Macx94",
+      "Ester98",
+      "mammalu"
+    ],
+    [
+      "Scarpe",
+      "FarryWar"
+    ],
+    [
+      "ilMatty98"
+    ],
+    [
+      "lol ou mons"
+    ],
+    [
+      "Little shop"
+    ]
+  ],
+  "format": "[Gen 7] Challenge Cup 2v2 (with custom rules)",
+  "generator": "Round Robin",
+  "bracketData": {
+    "type": "table",
+    "tableHeaders": {
+      "cols": [
+        "pokeleox",
+        "dilfmon",
+        "Marco210297",
+        "useless trainer",
+        "Macx94",
+        "Ester98",
+        "mammalu",
+        "Scarpe",
+        "FarryWar",
+        "ilMatty98",
+        "lol ou mons",
+        "Little shop"
+      ],
+      "rows": [
+        "pokeleox",
+        "dilfmon",
+        "Marco210297",
+        "useless trainer",
+        "Macx94",
+        "Ester98",
+        "mammalu",
+        "Scarpe",
+        "FarryWar",
+        "ilMatty98",
+        "lol ou mons",
+        "Little shop"
+      ]
+    },
+    "tableContents": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null
+      ]
+    ],
+    "scores": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      6,
+      6,
+      5,
+      5,
+      3,
+      1,
+      0
+    ]
+  }
+}

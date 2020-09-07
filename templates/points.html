@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+  <style>
+    .leaderboard {
+      text-align: center;
+    }
+    .leaderboard td:nth-child(3),
+    .leaderboard th:nth-child(3) {
+      text-align: left;
+    }
+    .leaderboard tbody tr:nth-child(-n+3) {
+      font-weight: bold;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <!-- This UI is a stub -->
+
+  <h2>Leaderboard di {{ room }} ({{ date }})</h2>
+
+  <table class="leaderboard">
+    <thead>
+      <tr>
+        <th></th>
+        <th>#</th>
+        <th>Utente</th>
+        <th>Punti</th>
+        <th>1st</th>
+        <th>2nd</th>
+        <th>3rd</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rs %}
+      <tr style="color: {{ row.user.name_color }}">
+        <td><img src="{{ row.user.avatar_url }}" width="80" height="80"></td>
+        <td>{{ loop.index }}</td>
+        <td>{{ row.user.username }}</td>
+        <td>{{ row.tourpoints }}</td>
+        <td>{{ row.first_perc }}%</td>
+        <td>{{ row.second_perc }}%</td>
+        <td>{{ row.third_perc }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

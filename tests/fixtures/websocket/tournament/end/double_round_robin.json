@@ -1,0 +1,821 @@
+{
+  "results": [
+    [
+      "juano ➤"
+    ],
+    [
+      "mammalu"
+    ],
+    [
+      "Pissog",
+      "Pippo24/7"
+    ],
+    [
+      "sprinto99"
+    ],
+    [
+      "Carlolucarelli",
+      "Barrel of Wine",
+      "Foinikorodos"
+    ],
+    [
+      "Alpha",
+      "chepokeballs"
+    ]
+  ],
+  "format": "FUTBOLITO BILANCIATO",
+  "generator": "Double Round Robin",
+  "bracketData": {
+    "type": "table",
+    "tableHeaders": {
+      "cols": [
+        "sprinto99",
+        "juano ➤",
+        "Pissog",
+        "Carlolucarelli",
+        "Barrel of Wine",
+        "Pippo24/7",
+        "mammalu",
+        "Foinikorodos",
+        "Alpha",
+        "chepokeballs"
+      ],
+      "rows": [
+        "sprinto99",
+        "juano ➤",
+        "Pissog",
+        "Carlolucarelli",
+        "Barrel of Wine",
+        "Pippo24/7",
+        "mammalu",
+        "Foinikorodos",
+        "Alpha",
+        "chepokeballs"
+      ]
+    },
+    "tableContents": [
+      [
+        null,
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        null,
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "loss",
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "state": "finished",
+          "result": "win",
+          "score": [
+            1,
+            0
+          ]
+        },
+        null
+      ]
+    ],
+    "scores": [
+      9,
+      12,
+      10,
+      8,
+      8,
+      10,
+      11,
+      8,
+      7,
+      7
+    ]
+  }
+}
