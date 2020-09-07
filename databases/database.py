@@ -4,6 +4,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
+import utils
 from database import Database
 
 db = Database.open()
@@ -109,3 +110,22 @@ class Users(Base):
     avatar = Column(String)
     description = Column(String)
     description_pending = Column(String, index=True)
+
+    @property
+    def avatar_url(self) -> str:
+        if self.avatar is None:
+            avatar_dir = "trainers"
+            avatar_name = "lucas"
+        elif self.avatar[0] == "#":
+            avatar_dir = "trainers-custom"
+            avatar_name = self.avatar[1:]
+        else:
+            avatar_dir = "trainers"
+            avatar_name = self.avatar
+        return (
+            f"https://play.pokemonshowdown.com/sprites/{avatar_dir}/{avatar_name}.png"
+        )
+
+    @property
+    def name_color(self) -> str:
+        return utils.username_color(self.userid)
