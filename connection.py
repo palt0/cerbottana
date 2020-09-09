@@ -32,6 +32,7 @@ class Connection:
         command_character: str,
         administrators: List[str],
         domain: str,
+        silent: bool,
     ) -> None:
         self.url = url
         self.username = username
@@ -43,6 +44,7 @@ class Connection:
         self.command_character = command_character
         self.administrators = administrators
         self.domain = domain
+        self.silent = silent
         self.init_tasks = init_tasks
         self.recurring_tasks = recurring_tasks
         self.handlers = handlers
@@ -162,9 +164,11 @@ class Connection:
         simple_message: str = "",
     ) -> None:
         message = htmlmin.minify(message)
-        if room is not None:
+        if room is not None and not self.silent:
             await self.send_message(room, f"/addhtmlbox {message}", False)
         elif user is not None:
+            if self.silent and utils.to_room_id(user) not in self.administrators:
+                return
             room = utils.can_pminfobox_to(self, utils.to_user_id(user))
             if room is not None:
                 await self.send_message(room, f"/pminfobox {user}, {message}", False)
@@ -183,6 +187,8 @@ class Connection:
             await self.send_message(room, message, escape)
 
     async def send_message(self, room: str, message: str, escape: bool = True) -> None:
+        if self.silent and room and not message.startswith("/pminfobox"):
+            return
         if escape:
             if message[0] == "/":
                 message = "/" + message
@@ -191,6 +197,8 @@ class Connection:
         await self.send(f"{room}|{message}")
 
     async def send_pm(self, user: str, message: str, escape: bool = True) -> None:
+        if self.silent and utils.to_room_id(user) not in self.administrators:
+            return
         if escape and message[0] == "/":
             message = "/" + message
         await self.send(f"|/w {utils.to_user_id(user)}, {message}")
@@ -224,4 +232,5 @@ CONNECTION = Connection(
     env("COMMAND_CHARACTER"),
     env.list("ADMINISTRATORS"),
     env("DOMAIN"),
+    env("SILENT", False),
 )
