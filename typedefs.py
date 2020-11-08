@@ -9,6 +9,7 @@ Role = Literal[
 TiersDict = TypedDict(
     "TiersDict",
     {
+        "id": str,
         "name": str,
         "section": str,
         "random": bool,

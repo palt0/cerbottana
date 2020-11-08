@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import TYPE_CHECKING, List, Optional
 
 from handlers import handler_wrapper
@@ -32,6 +33,7 @@ async def formats(conn: Connection, room: Room, *args: str) -> None:
         if section is not None:
             tiers.append(
                 {
+                    "id": re.sub(r"\W+", "", parts[0]).lower(),
                     "name": parts[0],
                     "section": section,
                     "random": bool(int(parts[1], 16) & 1),
