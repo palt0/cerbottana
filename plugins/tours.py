@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import random
+import re
 from typing import TYPE_CHECKING, List, Optional
 
 from plugins import command_wrapper
@@ -76,6 +77,37 @@ async def randtour(msg: Message) -> None:
         allow_scouting=True,
         rules=rules,
     )
+
+
+@command_wrapper(
+    aliases=("torneo", "tournament"),
+    helpstr="<i>[tier]</i> Avvia un torneo.",
+    is_unlisted=True,
+)
+async def tour(msg: Message) -> None:
+    if msg.room is None or not msg.user.has_role("driver", msg.room):
+        return
+
+    if "," in msg.arg:
+        await msg.reply("(Basta specificare solo un argomento per la tier.)")
+
+    if not msg.arg:
+        formatid = "ou"
+    else:
+        formatid = re.sub(r"\W+", "", msg.args[0]).lower()
+
+        aliases = {
+            "randbat": "randombattle",
+            "randbats": "randombattle",
+            "random": "randombattle",
+        }
+        if formatid in aliases:
+            formatid = aliases[formatid]
+        elif formatid not in [tier["id"] for tier in msg.conn.tiers]:
+            await msg.reply("Tier non riconosciuta.")
+            return
+
+    await create_tour(msg.room, formatid, allow_scouting=True)
 
 
 # --- Commands for tours with custom rules ---
