@@ -40,10 +40,8 @@ class Connection:
         self.password = password
         self.avatar = avatar
         self.statustext = statustext
-        self.rooms: Dict[RoomId, Room] = {}  # roomid, Room
-        for roomname in rooms:
-            roomid = utils.to_room_id(roomname)
-            self.rooms[roomid] = Room(self, roomid, autojoin=True)
+        self.rooms: Dict[RoomId, Room] = {}  # Rooms cerbottana is currently in
+        self.roomids_autojoin = rooms  # Rooms joined at startup automatically
         self.main_room = Room.get(self, main_room)
         self.command_character = command_character
         self.administrators = [utils.to_user_id(user) for user in administrators]

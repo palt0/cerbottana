@@ -26,8 +26,7 @@ class Room:
         conn (Connection): Used to access the websocket.
         roomid (str): Uniquely identifies a room, see utils.to_room_id.
         is_private (bool): True if room is unlisted/private.
-        autojoin (bool, optional): Whether the bot should join the room on startup.
-            Defaults to False.
+        autojoin (bool): Whether cerbottana joined this room at startup.
         buffer (Deque[str]): Fixed list of the last room messages.
         language (str): Room language.
         language_id (int): Veekun id for language.
@@ -37,21 +36,16 @@ class Room:
         users (Dict[User, str]): User instance, rank string.
         no_mods_online (Optional[float])
         last_modchat_command (float)
-
-    Todo:
-        Rooms should be removed from conn.rooms if they |deinit|.
     """
 
     def __init__(
         self,
         conn: Connection,
         roomid: RoomId,
-        autojoin: bool = False,
     ) -> None:
         # Attributes initialized directly
         self.conn = conn
         self.roomid = roomid
-        self.autojoin = autojoin
 
         # Attributes initialized through handlers
         self.dynamic_buffer: Deque[str] = deque(maxlen=20)
@@ -65,12 +59,9 @@ class Room:
         self.no_mods_online: Optional[float] = None
         self.last_modchat_command: float = 0
 
-        # Register new initialized room
-        if self.roomid in self.conn.rooms:
-            warn = f"Warning: overriding previous data for {self.roomid}! "
-            warn += "You should avoid direct initialization and use Room.get instead."
-            print(warn)
-        self.conn.rooms[self.roomid] = self
+    @property
+    def autojoin(self) -> bool:
+        return self.roomid in self.conn.roomids_autojoin
 
     @property
     def buffer(self) -> Deque[str]:
@@ -141,6 +132,31 @@ class Room:
 
     def __contains__(self, user: User) -> bool:
         return user in self.users
+
+    async def join(self) -> bool:
+        """Joins the room.
+
+        Returns:
+            bool: True if the cerbottana isn't already in the room.
+
+        Todo:
+            Return False if |noinit| is received.
+        """
+        if self.roomid in self.conn.rooms:  # cerbottana is already in the room.
+            return False
+        await self.conn.send(f"|/join {self}")
+        return True
+
+    async def leave(self) -> bool:
+        """Leaves the room. Doesn't work if the room is joined at bot startup.
+
+        Returns:
+            bool: True if cerbottana was in the room and could successfully leave it.
+        """
+        if self.roomid not in self.conn.rooms or self.autojoin:
+            return False
+        await self.conn.send(f"|/leave {self}")
+        return True
 
     def _check_no_mods_online(self) -> None:
         if self.no_mods_online:
@@ -226,5 +242,5 @@ class Room:
         """
         roomid = utils.to_room_id(room)
         if roomid not in conn.rooms:
-            conn.rooms[roomid] = cls(conn, roomid)
+            return cls(conn, roomid)
         return conn.rooms[roomid]

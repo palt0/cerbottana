@@ -51,9 +51,16 @@ async def init(conn: Connection, room: Room, *args: str) -> None:
     if len(args) < 1:
         return
 
+    conn.rooms[room.roomid] = room
+
     if args[0] == "chat":
         await conn.send(f"|/cmd roominfo {room.roomid}")
         await room.send("/roomlanguage", False)
+
+
+@handler_wrapper(["deinit"])
+async def deinit(conn: Connection, room: Room, *args: str) -> None:
+    del conn.rooms[room.roomid]
 
 
 @handler_wrapper(["title"])
