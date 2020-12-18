@@ -26,6 +26,10 @@ async def botjoin(msg: Message) -> None:
         await msg.reply("Inserire un nome valido per la room")
         return
 
+    if roomid.startswith("battle-"):
+        await msg.reply("Non posso joinare una room di lotta...")
+        return
+
     room = Room.get(msg.conn, roomid)
     if not (msg.user.is_administrator or msg.user.has_role("owner", room)):
         return
