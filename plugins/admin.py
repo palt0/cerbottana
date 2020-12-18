@@ -21,6 +21,9 @@ async def kill(msg: Message) -> None:
 
 @command_wrapper()
 async def botjoin(msg: Message) -> None:
+    if not (msg.user.is_administrator or msg.user.has_role("voice")):
+        return
+
     roomid = utils.to_room_id(msg.arg)
     if not roomid:
         await msg.reply("Inserire un nome valido per la room")
@@ -30,16 +33,19 @@ async def botjoin(msg: Message) -> None:
         await msg.reply("Non posso joinare una room di lotta...")
         return
 
-    room = Room.get(msg.conn, roomid)
-    if not (msg.user.is_administrator or msg.user.has_role("owner", room)):
-        return
-
-    if not await room.join():
+    if not await Room.get(msg.conn, roomid).join():
         await msg.reply("Impossibile joinare la room")
 
 
 @command_wrapper()
 async def botleave(msg: Message) -> None:
+    if not (
+        msg.user.is_administrator
+        or msg.user.has_role("voice")  # global voice
+        or msg.user.has_role("owner", msg.room)
+    ):
+        return
+
     if msg.room is not None and not msg.arg:
         room = msg.room
     else:
