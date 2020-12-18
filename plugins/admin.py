@@ -20,7 +20,7 @@ async def kill(msg: Message) -> None:
 
 
 @command_wrapper()
-async def join(msg: Message) -> None:
+async def botjoin(msg: Message) -> None:
     roomid = utils.to_room_id(msg.arg)
     if not roomid:
         await msg.reply("Inserire un nome valido per la room")
@@ -35,7 +35,7 @@ async def join(msg: Message) -> None:
 
 
 @command_wrapper()
-async def leave(msg: Message) -> None:
+async def botleave(msg: Message) -> None:
     if msg.room is not None and not msg.arg:
         room = msg.room
     else:
